@@ -1,0 +1,1 @@
+export { default as endPoints } from './endPoints'
