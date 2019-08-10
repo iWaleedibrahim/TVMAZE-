@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         marginTop: 50,
-        backgroundColor: '#aaa'
+        backgroundColor: '#ddd'
     },
     imageThumbnail: {
         justifyContent: 'center',

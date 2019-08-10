@@ -1,3 +1,6 @@
+
+import { removeTags } from '../Utils/Helpers/removeTags'
+
 export class Show {
     url;
     name;
@@ -63,7 +66,7 @@ export class Show {
         this.network = showObject.network; // object
         this.webChannel = showObject.webChannel; // object
         this.externals = showObject.externals; // object
-        this.summary = showObject.summary; // string in html
+        this.summary = removeTags(showObject.summary); // string in html
         this.updated = showObject.updated; // number timestamp
         this.links = showObject._links; // object
         this.name =
@@ -88,7 +91,7 @@ export class ShowCollection {
         const data = response.data
         const len = data.length
         this.list = Array(len)
-        for(let i = 0; i < len;i++){
+        for (let i = 0; i < len; i++) {
             this.list[i] = new Show(data[i])
         }
     }

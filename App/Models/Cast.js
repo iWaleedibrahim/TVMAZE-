@@ -25,3 +25,21 @@ export class Cast {
         this.characterName = castObject.character.name;
     }
 }
+
+
+export class CastCollection {
+    list = [];
+
+    constructor(response) {
+        this.parse(response);
+    }
+
+    parse(response) {
+        const data = response.data
+        const len = data.length
+        this.list = Array(len)
+        for (let i = 0; i < len; i++) {
+            this.list[i] = new Cast(data[i])
+        }
+    }
+}

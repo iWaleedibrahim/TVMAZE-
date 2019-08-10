@@ -23,7 +23,7 @@ const ShowStack = createStackNavigator(
         Show: { screen: ShowScreen },
     },
     {
-        headerMode: 'none',
+        headerMode: 'screen',
     }
 )
 
@@ -106,7 +106,7 @@ const IntroStack = createSwitchNavigator(
 )
 
 
-export default createAppContainer(IntroStack)
+export default createAppContainer(ShowStack)
 
 // Intro Stack { Intro, Splash, Launch } 
 

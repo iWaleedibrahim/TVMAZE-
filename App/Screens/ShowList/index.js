@@ -28,7 +28,7 @@ class ShowList extends Component {
     }
 
     goToShow = (item) => {
-        this.props.navigation.navigate("Show", { id: item.id })
+        this.props.navigation.navigate("Show", { item: item })
     }
 
     handleTextChange(searchTerm) {

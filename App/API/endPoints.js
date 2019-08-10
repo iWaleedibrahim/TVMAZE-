@@ -15,4 +15,12 @@ export default {
         method: 'get', // default,
         params: { q: '' },
     },
+    "getCastList": {
+        baseURL: BASE_URL,
+        url: "/show/!q/Cast",
+        method: 'get', // default,
+        params: { q: '' },
+    }
 }
+
+http://api.tvmaze.com/shows/1/cast
